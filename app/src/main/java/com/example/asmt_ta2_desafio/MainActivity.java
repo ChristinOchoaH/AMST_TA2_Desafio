@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton actionButtonC;
     FloatingActionButton actionButtonV;
     FloatingActionButton actionButtonM;
+    FloatingActionButton actionButtonG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent a = new Intent(getApplicationContext(), MapsActivity.class);
+                startActivity(a);
+            }
+        });
+
+        actionButtonG = (FloatingActionButton)findViewById(R.id.fabGrafico);
+        actionButtonG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a = new Intent(getApplicationContext(), Grafico.class);
                 startActivity(a);
             }
         });
